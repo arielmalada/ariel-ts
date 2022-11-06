@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { animated, useSpring } from "react-spring";
 import tw from "twin.macro";
 import SectionTitle from "../components/atoms/SectionTitle";
-import { useIsInViewport } from "../hooks/useInViewPort";
+import { useSectionContext } from "../contexts/useSection.context";
+import { useIsInViewport } from "../hooks/useInViewPort.hook";
 
 const Container = tw.div`flex items-center justify-center h-full`;
 
@@ -18,6 +19,11 @@ const Achievements: React.FC = () => {
     delay: 200,
     reset: false,
   });
+  const sectionContext = useSectionContext();
+
+  useEffect(() => {
+    if (isInViewportAchievements) sectionContext.setSection("achievements");
+  }, [isInViewportAchievements, sectionContext]);
   return (
     <section id="achievements" className="relative min-h-[85vh] h-[85vh] px-4 py-2 scroll-smooth flex flex-col overflow-hidden">
       <SectionTitle >Achievements</SectionTitle>

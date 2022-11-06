@@ -1,7 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import tw from "twin.macro";
-import useScrollPosition from "../../hooks/useScroll";
+import useScrollPosition from "../../hooks/useScroll.hook";
 
 const ScrollToTopContainer = tw.div`fixed right-10 bottom-10 z-20 rounded-md flex items-center justify-center w-10 h-10 bg-[#4F378B] hover:bg-opacity-80 cursor-pointer transition-colors`;
 

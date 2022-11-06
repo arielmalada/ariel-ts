@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { animated, useSpring } from "react-spring";
 import tw from "twin.macro";
 import SectionTitle from "../components/atoms/SectionTitle";
-import { useIsInViewport } from "../hooks/useInViewPort";
+import { useSectionContext } from "../contexts/useSection.context";
+import { useIsInViewport } from "../hooks/useInViewPort.hook";
 
 const Container = tw.div`flex items-center justify-center h-full`;
 
@@ -18,6 +19,11 @@ const Contacts: React.FC = () => {
     delay: 200,
     reset: false,
   });
+  const sectionContext = useSectionContext();
+
+  useEffect(() => {
+    if (isInViewportContacts) sectionContext.setSection("contacts");
+  }, [isInViewportContacts, sectionContext]);
   return (
     <section
       id="contacts"

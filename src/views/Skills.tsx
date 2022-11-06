@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import SubSectionTitle from "../components/atoms/SubSectionTitle";
 import SectionTitle from "../components/atoms/SectionTitle";
 import { Typography } from "@material-tailwind/react";
 import { animated, useSpring } from "react-spring";
 import tw from "twin.macro";
-import { useIsInViewport } from "../hooks/useInViewPort";
+import { useIsInViewport } from "../hooks/useInViewPort.hook";
+import { useSectionContext } from "../contexts/useSection.context";
 
 const Container = tw.div`flex items-center justify-center h-full`;
 
@@ -20,6 +21,11 @@ const Skills: React.FC = () => {
     delay: 200,
     reset: false,
   });
+  const sectionContext = useSectionContext();
+
+  useEffect(() => {
+    if (isInViewportSkills) sectionContext.setSection("skills");
+  }, [isInViewportSkills, sectionContext]);
   return (
     <section
       id="skills"

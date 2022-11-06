@@ -7,7 +7,7 @@ const Trail: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 1000, friction: 200 },
     from: { opacity: 0 },
-    to: { opacity: 1},
+    to: { opacity: 1 },
   });
   return (
     <div className="space-x-2">
