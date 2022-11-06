@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useTrail, a } from "react-spring";
 import NavbarSite from "../components/molecules/Navbar";
 
@@ -23,6 +24,13 @@ const Trail: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 const Home: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Ariel's Website</title>
+        <meta
+          name="description"
+          content="Ariel's Website"
+        />
+      </Helmet>
       <NavbarSite />
 
       <div className="flex w-full h-[90vh] flex-col justify-center items-center">
