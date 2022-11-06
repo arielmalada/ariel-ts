@@ -3,7 +3,7 @@ import { animated, useSpring } from "react-spring";
 import tw from "twin.macro";
 import useScrollPosition from "../../hooks/useScroll";
 
-const ScrollToTopContainer = tw.div`fixed right-10 bottom-10 z-20 rounded-md flex items-center justify-center w-10 h-10 bg-[#332D41] hover:bg-[#4A4458] hover:text-[#E8DEF8] cursor-pointer transition-colors`;
+const ScrollToTopContainer = tw.div`fixed right-10 bottom-10 z-20 rounded-md flex items-center justify-center w-10 h-10 bg-[#4F378B] hover:bg-opacity-80 cursor-pointer transition-colors`;
 
 const ScrollToTop: React.FC = () => {
   const scrollToTop = () => {
@@ -31,7 +31,7 @@ const ScrollToTop: React.FC = () => {
         >
           <path
             d="m.723 8.2 1.762 1.744L8.223 4.28l5.737 5.665L15.723 8.2 8.223.778.723 8.2Z"
-            fill="#fff"
+            fill="currentColor"
           />
         </svg>
       </AnimatedScrollContainer>

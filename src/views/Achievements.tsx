@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
+import { animated, useSpring } from "react-spring";
+import tw from "twin.macro";
 import SectionTitle from "../components/atoms/SectionTitle";
+import { useIsInViewport } from "../hooks/useInViewPort";
+
+const Container = tw.div`flex items-center justify-center h-full`;
+
+const AnimatedContainer = animated(Container);
 
 const Achievements: React.FC = () => {
+  const refSection = useRef<HTMLDivElement>(null);
+  const isInViewportAchievements = useIsInViewport(refSection);
+  const props = useSpring({
+    config: { mass: 5, tension: 700, friction: 200 },
+    x: isInViewportAchievements ? 0 : 70,
+    opacity: isInViewportAchievements ? 1 : 0,
+    delay: 200,
+    reset: false,
+  });
   return (
-    <section id="achievements" className="relative min-h-[85vh] h-[85vh] px-4 py-2 scroll-smooth flex flex-col">
+    <section id="achievements" className="relative min-h-[85vh] h-[85vh] px-4 py-2 scroll-smooth flex flex-col overflow-hidden">
       <SectionTitle >Achievements</SectionTitle>
-      <div className="flex items-center justify-center h-full">
+      <AnimatedContainer style={props} ref={refSection}>
         <div className="w-full max-w-3xl pr-auto">
           <ul >
             <li>Inclusive Cities Hackathon / 2022 / Participants</li>
@@ -22,7 +38,7 @@ const Achievements: React.FC = () => {
             <li>National Bridge Competition for College Students 18 & 19 / 2016 - 2017 / Participants</li>
           </ul>
         </div>
-      </div>
+      </AnimatedContainer>
     </section>
   );
 };

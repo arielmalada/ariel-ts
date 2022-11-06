@@ -9,8 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #381E72;
+  background-color: #1C1B1F;
   color: #D0BCFF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 code {

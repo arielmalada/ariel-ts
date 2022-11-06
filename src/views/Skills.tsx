@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import SubSectionTitle from "../components/atoms/SubSectionTitle";
 import SectionTitle from "../components/atoms/SectionTitle";
 import { Typography } from "@material-tailwind/react";
+import { animated, useSpring } from "react-spring";
+import tw from "twin.macro";
+import { useIsInViewport } from "../hooks/useInViewPort";
+
+const Container = tw.div`flex items-center justify-center h-full`;
+
+const AnimatedContainer = animated(Container);
 
 const Skills: React.FC = () => {
+  const refSection = useRef<HTMLDivElement>(null);
+  const isInViewportSkills = useIsInViewport(refSection);
+  const props = useSpring({
+    config: { mass: 5, tension: 700, friction: 200 },
+    x: isInViewportSkills ? 0 : -70,
+    opacity: isInViewportSkills ? 1 : 0,
+    delay: 200,
+    reset: false,
+  });
   return (
     <section
       id="skills"
-      className="relative min-h-[85vh] h-[85vh] px-4 py-2 scroll-smooth flex flex-col"
+      className="relative min-h-[85vh] h-[85vh] px-4 py-2 scroll-smooth flex flex-col overflow-hidden"
     >
       <SectionTitle>Skills</SectionTitle>
-      <div className="flex items-center justify-center h-full">
+      <AnimatedContainer style={props} ref={refSection}>
         <div className="w-full max-w-3xl pr-auto">
           <SubSectionTitle className="text-muted">Languages:</SubSectionTitle>
           <Typography variant="paragraph">
@@ -26,7 +42,7 @@ const Skills: React.FC = () => {
           <SubSectionTitle className="text-muted">Developer Tools:</SubSectionTitle>
           <Typography variant="paragraph">Git, VSCode, WSL, Postman, Lighthouse</Typography>
         </div>
-      </div>
+      </AnimatedContainer>
     </section>
   );
 };

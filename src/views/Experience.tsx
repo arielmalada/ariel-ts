@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
   const isInViewportExperience = useIsInViewport(refSection);
   const props = useSpring({
     config: { mass: 5, tension: 700, friction: 200 },
-    x: isInViewportExperience ? 0 : 20,
+    x: isInViewportExperience ? 0 : 70,
     opacity: isInViewportExperience ? 1 : 0,
     delay: 200,
     reset: false,
@@ -25,11 +25,10 @@ const Experience: React.FC = () => {
     <section
       id="experience"
       className="min-h-[90vh] px-4 py-2 scroll-smooth relative overflow-hidden"
-      ref={refSection}
     >
       <SectionTitle>Experience</SectionTitle>
       <AnimatedContainer style={props}>
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" ref={refSection}>
           <div className="py-3">
             <SubSectionTitle>
               <a href="https://pintap.id" className="mr-2">
