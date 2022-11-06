@@ -7,7 +7,7 @@ import {
 } from "../contexts/useSection.context";
 import { useIsInViewport } from "../hooks/useInViewPort.hook";
 
-const Container = tw.div`flex items-center justify-center h-full`;
+const Container = tw.div`flex flex-col items-center justify-center h-full`;
 
 const AnimatedContainer = animated(Container);
 
@@ -33,11 +33,13 @@ const About: React.FC = () => {
       <SectionTitle>About</SectionTitle>
       <AnimatedContainer style={props} ref={refSection}>
         <p className="max-w-3xl">
-          I'm a front-end engineer with 3+ years of experience with ReactJS, and
-          Javascript. Currently Studying Human Technology Interaction Master
-          Degree Program at Tampere University. Love to create clean and
-          reusable code. Always seek knowledge, be flexible to changes, and
-          prioritize to work as a team to grow together
+          I'm a front-end engineer with UX in mind with 3+ years of experience with ReactJS, and
+          Javascript. I currently studying Human Technology Interaction Master's
+          degree's program at Tampere University and completed Bachelor degree's in Computer Science program at IPB University.  
+        </p>
+        <p className="max-w-3xl mt-4">
+          Always driven by my curiousity to learn something new. Used to study and build about mobile apps, robotics and game development. However, i decided to focus in frontend engineering and user experience. 
+          Love to play co-op games with friends and card games. I also like to make cakes once in a while because it's fun and i can share some slices to anyone that i know.
         </p>
       </AnimatedContainer>
     </section>
