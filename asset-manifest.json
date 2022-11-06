@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/arielmalada.github.io/static/css/main.140a0a53.css",
-    "main.js": "/arielmalada.github.io/static/js/main.cdbf33de.js",
-    "static/js/787.acf46493.chunk.js": "/arielmalada.github.io/static/js/787.acf46493.chunk.js",
-    "index.html": "/arielmalada.github.io/index.html",
-    "main.140a0a53.css.map": "/arielmalada.github.io/static/css/main.140a0a53.css.map",
-    "main.cdbf33de.js.map": "/arielmalada.github.io/static/js/main.cdbf33de.js.map",
-    "787.acf46493.chunk.js.map": "/arielmalada.github.io/static/js/787.acf46493.chunk.js.map"
+    "main.css": "/static/css/main.140a0a53.css",
+    "main.js": "/static/js/main.b498e9f3.js",
+    "static/js/787.acf46493.chunk.js": "/static/js/787.acf46493.chunk.js",
+    "index.html": "/index.html",
+    "main.140a0a53.css.map": "/static/css/main.140a0a53.css.map",
+    "main.b498e9f3.js.map": "/static/js/main.b498e9f3.js.map",
+    "787.acf46493.chunk.js.map": "/static/js/787.acf46493.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.140a0a53.css",
-    "static/js/main.cdbf33de.js"
+    "static/js/main.b498e9f3.js"
   ]
 }
