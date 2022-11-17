@@ -4,7 +4,7 @@ import { useSectionContext } from "../../contexts/useSection.context";
 import useScrollPosition from "../../hooks/useScroll.hook";
 // import NavbarItem from "../atoms/NavbarItem";
 
-const navbarItemsClass = `flex items-center transition-colors !no-underline`;
+const navbarItemsClass = `flex items-center transition-colors `;
 const Pages = () => {
   const sectionState = useSectionContext();
   const { section } = sectionState;
@@ -14,7 +14,7 @@ const Pages = () => {
         <a
           href="#about"
           className={`${navbarItemsClass} ${
-            section === "about" ? "underline" : ""
+            section === "about" ? "!underline" : "no-underline"
           }`}
         >
           About
@@ -24,7 +24,7 @@ const Pages = () => {
         <a
           href="#experience"
           className={`${navbarItemsClass} ${
-            section === "experience" ? "underline" : ""
+            section === "experience" ? "!underline" : "no-underline"
           }`}
         >
           Experience
@@ -34,7 +34,7 @@ const Pages = () => {
         <a
           href="#skills"
           className={`${navbarItemsClass} ${
-            section === "skills" ? "underline" : ""
+            section === "skills" ? "!underline" : "no-underline"
           }`}
         >
           Skills
@@ -44,7 +44,7 @@ const Pages = () => {
         <a
           href="#achievements"
           className={`${navbarItemsClass} ${
-            section === "achievements" ? "underline" : ""
+            section === "achievements" ? "!underline" : "no-underline"
           }`}
         >
           Achievements
@@ -54,7 +54,7 @@ const Pages = () => {
         <a
           href="#contacts"
           className={`${navbarItemsClass} ${
-            section === "contacts" ? "underline" : ""
+            section === "contacts" ? "!underline" : "no-underline"
           }`}
         >
           Contacts
