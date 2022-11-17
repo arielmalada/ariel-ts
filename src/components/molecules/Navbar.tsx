@@ -4,15 +4,16 @@ import { useSectionContext } from "../../contexts/useSection.context";
 import useScrollPosition from "../../hooks/useScroll.hook";
 // import NavbarItem from "../atoms/NavbarItem";
 
+const navbarItemsClass = `flex items-center transition-colors !no-underline`;
 const Pages = () => {
   const sectionState = useSectionContext();
   const { section } = sectionState;
   return (
-    <div className="flex items-center justify-between mx-auto text-[#EADDFF] font-medium list-none">
+    <div className="flex items-center justify-between mx-auto text-[#EADDFF]  font-medium list-none">
       <Typography as="li" variant="small" className="p-1">
         <a
           href="#about"
-          className={`flex items-center transition-colors ${
+          className={`${navbarItemsClass} ${
             section === "about" ? "underline" : ""
           }`}
         >
@@ -22,7 +23,7 @@ const Pages = () => {
       <Typography as="li" variant="small" className="p-1">
         <a
           href="#experience"
-          className={`flex items-center transition-colors ${
+          className={`${navbarItemsClass} ${
             section === "experience" ? "underline" : ""
           }`}
         >
@@ -32,7 +33,7 @@ const Pages = () => {
       <Typography as="li" variant="small" className="p-1">
         <a
           href="#skills"
-          className={`flex items-center transition-colors ${
+          className={`${navbarItemsClass} ${
             section === "skills" ? "underline" : ""
           }`}
         >
@@ -42,7 +43,7 @@ const Pages = () => {
       <Typography as="li" variant="small" className="p-1">
         <a
           href="#achievements"
-          className={`flex items-center transition-colors ${
+          className={`${navbarItemsClass} ${
             section === "achievements" ? "underline" : ""
           }`}
         >
@@ -52,7 +53,7 @@ const Pages = () => {
       <Typography as="li" variant="small" className="p-1">
         <a
           href="#contacts"
-          className={`flex items-center transition-colors ${
+          className={`${navbarItemsClass} ${
             section === "contacts" ? "underline" : ""
           }`}
         >
