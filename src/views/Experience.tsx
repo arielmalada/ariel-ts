@@ -43,19 +43,19 @@ const Experience: React.FC = () => {
             </SubSectionTitle>
             <div>
               <ul className="pl-5 list-disc">
-                <li>Developed Pintap Research with React and SolidJS</li>
+                <li>
+                  Worked together with 3rd party vendor to develop Pintap
+                  Research with React and SolidJS:
+                </li>
                 <ul className="pl-5 list-[square]">
                   <li>
-                    Develop questions page with different types of questions
-                    with React.
+                    Developed questions page that branched questions options
+                    based on user answers with different question types with
+                    React framework.
                   </li>
                   <li>
-                    Handling the logic of making branched questionnaire with
-                    different types of questions.
-                  </li>
-                  <li>
-                    Creating the response page and handle branched question with
-                    SolidJS.
+                    Created the form response page to record answers from survey
+                    participants & developed with SolidJS.
                   </li>
                 </ul>
                 <li>Developed Pintap Concierge with React and Gatsby</li>
@@ -100,8 +100,11 @@ const Experience: React.FC = () => {
             </SubSectionTitle>
             <ul className="pl-5 list-disc">
               <li>
-                Developed a new version of Hukumonline website with a new
-                framework to bring more features with React
+                Working on the new version of Hukumonline website with a React
+                framework to bring more features such as premium articles,
+                Hukumonline events, learning management system, and law search
+                engine that increased the subscription number and page views
+                after it was released.
               </li>
               <li>
                 Developed and improved the performance of several RESTful API
@@ -109,10 +112,9 @@ const Experience: React.FC = () => {
               </li>
               <li>
                 Maintain SEO and site performance by refactoring codes and using
-                web vitals
+                Web Vitals
               </li>
-              <li>Maintain legacy application that use PHP</li>
-              <li>Developed Pintap Concierge with React and Gatsby</li>
+              <li>Maintained legacy application (PHP, Zend)</li>
             </ul>
           </div>
           <div className="py-3">
@@ -138,7 +140,7 @@ const Experience: React.FC = () => {
           <div className="py-3">
             <SubSectionTitle>
               <span className="mr-2">Jakarta Industrial Estate Pulogadung</span>
-              / Web Develeper Intern / June 2018 - Sep. 2018
+              / Web Developer Intern / June 2018 - Sep. 2018
             </SubSectionTitle>
             <Typography variant="paragraph">
               Work here as an intern, developed a financial management system

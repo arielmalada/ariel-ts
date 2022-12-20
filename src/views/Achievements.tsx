@@ -34,12 +34,12 @@ const Achievements: React.FC = () => {
         <div className="w-full max-w-3xl pr-auto">
           <ul>
             <div className="mb-4">
-              <li className="mb-2 font-bold">Inclusive Cities Hackathon / 2022 / Participants</li>
+              <li className="mb-2 font-bold">Inclusive Cities Hackathon / 2022 / Winner</li>
               <p>
                 During the process, i see myself as a generalist. I help the
                 prototype design process with Figma, conducting user research,
                 code the AR Exhibition mobile prototype
-                <a href="https://arielmalada.github.io/webxr/" className="mx-1">demo</a>, made
+                <a href="https://arielmalada.github.io/webxr/" className="mx-1">demo(the AR only accessible in Chrome with Android phone)</a>, made
                 the 3D model, and video editing for the submission video
               </p>
               <p>

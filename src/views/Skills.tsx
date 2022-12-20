@@ -36,17 +36,21 @@ const Skills: React.FC = () => {
         <div className="w-full max-w-3xl pr-auto">
           <SubSectionTitle className="text-muted">Languages:</SubSectionTitle>
           <Typography variant="paragraph">
-            Javascript, Typescript, CSS, SASS, SQL, PHP, Dart
+            Javascript, Typescript, CSS, SCSS, PHP, Dart
           </Typography>
           <SubSectionTitle className="text-muted">Frameworks:</SubSectionTitle>
           <Typography variant="paragraph">
-            React, Tailwind, SolidJS, Gatsby, Bootstrap, Material Design,
-            ExpressJS
+            React, Next.JS, Tailwind, Bootstrap, Flutter, NodeJS, Jest, REST
+            API, MobX, Redux, Material Design, SolidJS
           </Typography>
           <SubSectionTitle className="text-muted">Databases:</SubSectionTitle>
           <Typography variant="paragraph">MySQL, MariaDB</Typography>
-          <SubSectionTitle className="text-muted">Developer Tools:</SubSectionTitle>
-          <Typography variant="paragraph">Git, VSCode, WSL, Postman, Lighthouse</Typography>
+          <SubSectionTitle className="text-muted">
+            Developer Tools:
+          </SubSectionTitle>
+          <Typography variant="paragraph">
+            Git, VSCode, WSL, Figma, Jira, Mural, Postman, Lighthouse, Markdown
+          </Typography>
         </div>
       </AnimatedContainer>
     </section>
